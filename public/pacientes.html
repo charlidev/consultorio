@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pacientes - Consultorio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+      <h2>Consultorio</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="pacientes.html" class="active">Pacientes</a></li>
+          <li><a href="dentistas.html">Dentistas</a></li>
+          <li><a href="citas.html">Citas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <h1>Pacientes</h1>
+      <button id="btn-agregar">Agregar paciente</button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-pacientes">
+          <!-- Se llenará dinámicamente -->
+        </tbody>
+      </table>
+
+    </main>
+  </div>
+
+  <!-- Modal para agregar paciente -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="cerrar">&times;</span>
+    <h2>Agregar nuevo paciente</h2>
+    <form id="form-paciente">
+      <input type="text" name="nombre" placeholder="Nombre" required />
+      <input type="tel" name="telefono" placeholder="Teléfono" required />
+      <input type="email" name="email" placeholder="Correo electrónico" required />
+      <button type="submit">Guardar</button>
+    </form>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
