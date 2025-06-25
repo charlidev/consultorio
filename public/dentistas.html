@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dentistas - Consultorio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+      <h2>Consultorio</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="pacientes.html">Pacientes</a></li>
+          <li><a href="dentistas.html" class="active">Dentistas</a></li>
+          <li><a href="citas.html">Citas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Modal para agregar/editar dentista -->
+    <div id="modal-dentista" class="modal">
+        <div class="modal-content">
+            <span class="cerrar-dentista">&times;</span>
+            <h2>Agregar / Editar Dentista</h2>
+            <form id="form-dentista">
+                <input type="text" name="nombre" placeholder="Nombre" required />
+                <input type="text" name="especialidad" placeholder="Especialidad" />
+                <input type="email" name="email" placeholder="Correo electrónico" required />
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <h1>Dentistas</h1>
+      <button id="btn-agregar-dentista">Agregar dentista</button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Especialidad</th>
+            <th>Email</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-dentistas">
+          <!-- Se llenará dinámicamente -->
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
